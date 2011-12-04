@@ -7,7 +7,7 @@ require 'amazon/webservices/mturk/question_generator'
 require "highline/import"
 
 PREAMBLE = '<?xml version="1.0" encoding="UTF-8"?>'+"\n"
-PREAMBLE += '<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">' + "\n"
+PREAMBLE << '<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">' + "\n"
 TAIL = '</QuestionForm>'
 
 def create_question(sentence_num,story)
@@ -21,13 +21,14 @@ def create_question(sentence_num,story)
     <IsRequired>true</IsRequired>
     <QuestionContent>
       <Title>Add one complete sentence to the following story:</Title>
+      #{paragraphs.map { |p| "<Text>#{p}</Text>" }.join("\n") }
+      <Title>Please keep the following guidelines in mind:</Title>
       <List>
         <ListItem>You must write a complete sentence that makes logical sense in the context of the story.</ListItem>
         <ListItem>Write the first sentence that comes to mind.</ListItem>
         <ListItem>Do not copy the sentence from another source.</ListItem>
         <ListItem>Begin with a asterisk character (*) if you would like to start a new paragraph.</ListItem>
       </List>
-      #{paragraphs.map { |p| "<Text>#{p}</Text>" }.join("\n") }
     </QuestionContent>
     <AnswerSpecification>
       <FreeTextAnswer>
