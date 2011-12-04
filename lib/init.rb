@@ -1,5 +1,5 @@
 require "rubygems"
 require "bundler"
-require "ruby-aws"
 Bundler.setup(:default)
+require "ruby-aws"
 $:.unshift(File.dirname(__FILE__))

@@ -11,5 +11,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  nokogiri
+  highline
   ruby-aws
