@@ -62,10 +62,12 @@ OPENING_SENTENCES = [
 
 # these are the sentences that were added by mechanical turk workers while testing this script.
 
-story = [
-  "A lump rose in Andy's throat and he brushed away tears as he reread the chilling message taped to his dorm room door.",
-  "This can't be happening he thought, How could someone do this to me? Andy carefully took the note off of the door, and entered his room."
-].join(" ")
+story = <<-STORY
+A lump rose in Andy's throat and he brushed away tears as he reread the chilling message taped to his dorm room door. This can't be happening he thought, How could someone do this to me? Andy carefully took the note off of the door, and entered his room. He sat at the edge of his bed, thoughts racing through his head as he stared at the paper in his hand. He tore it furiously.
+His girlfriend left him. She was never happy in the relationship and decided against continuing it. He was at a loss at what to think or say or do.  She was his first girlfriend, his first love. Andy decided to talk to his girlfriend and see if there was anything that could be done to save their relationship. He ran as fast as he could, almost tripping down the stairs, as he held back tears, to her dorm room three flights below his. When he got there, he stopped for a while and took a deep breath. He entered without knocking the door. Something was amiss - his girlfriend's dorm room looked like it had been ransacked, and she was nowhere to be found. As he backed slowly out of the room, he bumped into his girlfriends roommate Ella, who shoved him and said stearnly "Why are you in here?  Don't you know, Alexis broke up with you!" Andy looked at her with empty eyes, pushed her aside and run away. He was starting to suspect that someone had kidnapped his girlfriend and left him a fake break-up note so that he would stay away and not become suspicious - and maybe her friend Ella knew something. He had to go back. But before that he needed to take a closer look at the note to make sure that it was not Ella's handwriting. He entered his room and took carefully the pieces of the note from the floor. He put them together. He was really confused, it was her handwriting. He felt so devastated that he couldn't even cry.
+A sense of calm came over Andy as he reached for the phone to call the police. "Someone is bleeding to death in the basement" he stated. "Are they still conscious?" Asked the officer. "Barely so.", he replied, "Her breathing is faltering."
+"What is your address?" the voice asked, calm and collected. Andy, aware of the address belonging to a large dormitory, calmly stated the address, spelling out the street name with perfect enunciation.
+STORY
 
 options = {
   AWSAccessKeyId: ENV['AWS_ACCESS_KEY_ID'],
