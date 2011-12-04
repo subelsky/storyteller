@@ -11,4 +11,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  nokogiri
   ruby-aws
